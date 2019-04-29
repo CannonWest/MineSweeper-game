@@ -33,6 +33,10 @@ public class MineSweeper {
 	
 	public void selectSpace(String playerInp)	{
 		char playerXChar = Character.toUpperCase(playerInp.charAt(0));
+		
+		if(Character.isDigit(playerXChar))
+			throw new IllegalArgumentException("Please enter the letter/symbol, followed by the digit");
+		
 		int playerX = playerXChar - 'A';
 		
 		int playerY = Integer.parseInt(playerInp.substring(1, playerInp.length())) - 1;

@@ -37,6 +37,7 @@ public class MineSweeperTest {
 				//determines if the player entered something that is not a digit and assigns the corresponding difficulty (throws if it is invalid)
 				if(!Character.isDigit(userInp.charAt(0)))	{
 					char diff = userInp.charAt(0);
+					diff = Character.toLowerCase(diff);
 					switch (diff)	{
 					case 'e':
 						userInp = "" + (boardSize * boardSize)/7;
